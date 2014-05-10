@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>SoCo by SoCo</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/SoCo">View On GitHub</a></li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>SoCo</h1>
+          <p>Controlling your Sonos speakers from Python and the commandline</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/SoCo">SoCo</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="welcome-to-soco" class="anchor" href="#welcome-to-soco"><span class="octicon octicon-link"></span></a>Welcome to SoCo</h1>
+
+<p>SoCo (Sonos Controller) lets you control your <a href="http://www.sonos.com/">Sonos</a> speakers from Python or the commandline.</p>
+
+<h2>
+<a name="python-example" class="anchor" href="#python-example"><span class="octicon octicon-link"></span></a>Python example</h2>
+
+<p>When using Python, you need the <a href="https://pypi.python.org/pypi/soco">soco</a> package (see <a href="https://github.com/SoCo/SoCo">GitHub project</a>).</p>
+
+<div class="highlight highlight-python"><pre>
+<span class="kn">import</span> <span class="nn">soco</span>
+<span class="n">speakers</span> <span class="o">=</span> <span class="n">soco</span><span class="o">.</span><span class="n">discover</span><span class="p">()</span>
+
+<span class="n">speaker</span> <span class="o">=</span> <span class="n">speakers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">speaker</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+
+</pre></div>
+
+<h2>
+<a name="commandline-example" class="anchor" href="#commandline-example"><span class="octicon octicon-link"></span></a>Commandline example</h2>
+
+<p>For the commandline interface you need the socos package (see <a href="https://github.com/SoCo/socos">GitHub project</a>).</p>
+
+<div class="highlight highlight-bash"><pre>
+<span class="nv">$ </span>socos list
+<span class="o">(</span>1<span class="o">)</span> 192.168.0.129 Living room
+<span class="o">(</span>2<span class="o">)</span> 192.168.0.130 Bedroom
+
+<span class="nv">$ </span>socos play 192.168.0.129
+
+</pre></div>
+
+<h2>
+<a name="discuss" class="anchor" href="#discuss"><span class="octicon octicon-link"></span></a>Discuss</h2>
+
+<p>If you want to ask questions or start a discussion, you can find us on <a href="https://groups.google.com/forum/#!forum/python-soco">Google Groups</a>.</p>
+
+<h2>
+<a name="related-projects" class="anchor" href="#related-projects"><span class="octicon octicon-link"></span></a>Related Projects</h2>
+
+<ul>
+<li><a href="http://scottlobdell.me/2014/02/automated-intro-music-in-the-office-python-opencv-gphoto2-and-boost/">Automated Intro Music in the Office</a></li>
+<li><a href="https://github.com/pfischi/shSonos">Sonos Control server for the Smarthome.py Project</a></li>
+</ul>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-107321-10");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
