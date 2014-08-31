@@ -51,7 +51,9 @@
 <span class="kn">import</span> <span class="nn">soco</span>
 <span class="n">speakers</span> <span class="o">=</span> <span class="n">soco</span><span class="o">.</span><span class="n">discover</span><span class="p">()</span>
 
-<span class="p">[</span><span class="n">speaker</span><span class="o">.</span><span class="n">play</span><span class="p">()</span> <span class="k">for</span> <span class="n">speaker</span> <span class="ow">in</span> <span class="n">speakers</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">speaker</span> <span class="ow">in</span> <span class="n">speakers</span><span class="p">:</span>
+    <span class="n">speaker</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+
 </pre></div>
 
 <p>For all features, have a look at the <a href="http://docs.python-soco.com/">documentation</a>.</p>
