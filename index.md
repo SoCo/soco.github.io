@@ -10,11 +10,20 @@ When using Python, you need the [soco](https://pypi.python.org/pypi/soco) packag
 
 ```` python
 
+# Import soco and get a SoCo instance
 import soco
-speakers = soco.discover()
+device = soco.discovery.any_soco()
 
-speaker = speakers[0]
-speaker.play()
+# Get all albums from the music library that contains the word "Black"
+# and add them to the queue
+albums = device.music_library.get_albums(search_term='Black')
+for album in albums:
+	print('Added:', album.title)
+device.add_to_queue(album)
+
+# Dial up the volume (just a bit) and play
+device.volume += 10
+device.play()
 
 ````
 
@@ -23,7 +32,7 @@ Commandline example
 
 For the commandline interface you need the socos package (see [GitHub project](https://github.com/SoCo/socos)).
 
-```` bash
+````
 
 $ socos list
 (1) 192.168.0.129 Living room
